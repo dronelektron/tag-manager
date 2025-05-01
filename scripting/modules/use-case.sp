@@ -7,6 +7,7 @@ void UseCase_AddTag(int client, int target, const char[] tag) {
 
     PlayerTagList_Add(target, tag);
     Message_TagAdded(client, target, tag);
+    Forward_OnTagAdded(client, target, tag);
 }
 
 void UseCase_RemoveTag(int client, int target, const char[] tag) {
@@ -18,4 +19,5 @@ void UseCase_RemoveTag(int client, int target, const char[] tag) {
 
     PlayerTagList_Remove(target, tag);
     Message_TagRemoved(client, target, tag);
+    Forward_OnTagRemoved(client, target, tag);
 }

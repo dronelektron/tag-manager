@@ -19,3 +19,23 @@ Allows you to manage player tags
 
 * sm_tagmanager_add &lt;#userid|name&gt; &lt;tag&gt; - Add tag for player
 * sm_tagmanager_remove &lt;#userid|name&gt; &lt;tag&gt; - Remove tag from player
+
+### API
+
+Called when the `client` has added a `tag` for the `target`
+
+```sourcepawn
+forward void TagManager_OnTagAdded(int client, int target, const char[] tag);
+```
+
+Called when the `client` has removed a `tag` for the `target`
+
+```sourcepawn
+forward void TagManager_OnTagRemoved(int client, int target, const char[] tag);
+```
+
+Checks if the `client` has the `tag`
+
+```sourcepawn
+native bool TagManager_IsClientHasTag(int client, const char[] tag);
+```
