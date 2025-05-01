@@ -6,3 +6,4 @@
 #define COMMAND_PREFIX "sm_tagmanager_"
 #define COMMAND_TAG_ADD COMMAND_PREFIX ... "add"
 #define COMMAND_TAG_REMOVE COMMAND_PREFIX ... "remove"
+#define COMMAND_TAG_CHECK COMMAND_PREFIX ... "check"

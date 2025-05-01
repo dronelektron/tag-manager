@@ -18,7 +18,8 @@ Allows you to manage player tags
 ### Console Commands
 
 * sm_tagmanager_add &lt;#userid|name&gt; &lt;tag&gt; - Add tag for player
-* sm_tagmanager_remove &lt;#userid|name&gt; &lt;tag&gt; - Remove tag from player
+* sm_tagmanager_remove &lt;#userid|name&gt; &lt;tag&gt; - Remove tag for player
+* sm_tagmanager_check &lt;#userid|name&gt; &lt;tag&gt; - Check tag for player
 
 ### API
 

@@ -1,6 +1,6 @@
 void UseCase_AddTag(int client, int target, const char[] tag) {
     if (PlayerTagList_Exists(target, tag)) {
-        Message_TagAlreadyAdded(client, target, tag);
+        Message_PlayerWithTag(client, target, tag);
 
         return;
     }
@@ -12,7 +12,7 @@ void UseCase_AddTag(int client, int target, const char[] tag) {
 
 void UseCase_RemoveTag(int client, int target, const char[] tag) {
     if (!PlayerTagList_Exists(target, tag)) {
-        Message_TagNotFound(client, target, tag);
+        Message_PlayerWithoutTag(client, target, tag);
 
         return;
     }
@@ -20,4 +20,12 @@ void UseCase_RemoveTag(int client, int target, const char[] tag) {
     PlayerTagList_Remove(target, tag);
     Message_TagRemoved(client, target, tag);
     Forward_OnTagRemoved(client, target, tag);
+}
+
+void UseCase_CheckTag(int client, int target, const char[] tag) {
+    if (PlayerTagList_Exists(target, tag)) {
+        Message_PlayerWithTag(client, target, tag);
+    } else {
+        Message_PlayerWithoutTag(client, target, tag);
+    }
 }

@@ -5,22 +5,22 @@
         "en"    "Player is not found"
     }
 
-    "Tag already added"
+    "Player with tag"
     {
         "#format"   "{1:N},{2:s}"
-        "en"    "Tag '{2}' has already been added for player {1}"
+        "en"    "Player {1} has '{2}' tag"
+    }
+
+    "Player without tag"
+    {
+        "#format"   "{1:N},{2:s}"
+        "en"    "Player {1} does not have '{2}' tag"
     }
 
     "Tag added"
     {
         "#format"   "{1:N},{2:s}"
         "en"    "Tag '{2}' has been added for player {1}"
-    }
-
-    "Tag not found"
-    {
-        "#format"   "{1:N},{2:s}"
-        "en"    "Tag '{2}' is not found for player {1}"
     }
 
     "Tag removed"
