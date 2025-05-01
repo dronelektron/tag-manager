@@ -10,12 +10,12 @@ void PlayerTagList_Clear(int client) {
     g_tags[client].Clear();
 }
 
-void PlayerTagList_Add(int client, const char[] tag) {
-    g_tags[client].SetValue(tag, NO_VALUE);
+bool PlayerTagList_Add(int client, const char[] tag) {
+    return g_tags[client].SetValue(tag, NO_VALUE, REPLACE_NO);
 }
 
-void PlayerTagList_Remove(int client, const char[] tag) {
-    g_tags[client].Remove(tag);
+bool PlayerTagList_Remove(int client, const char[] tag) {
+    return g_tags[client].Remove(tag);
 }
 
 bool PlayerTagList_Exists(int client, const char[] tag) {
