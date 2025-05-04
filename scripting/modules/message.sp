@@ -31,3 +31,11 @@ void Message_TagRemoved(int client, int target, const char[] tag) {
     ShowActivity2(client, PREFIX, "%t", "Tag removed", target, tag);
     LogMessage("\"%L\" removed '%s' tag for \"%L\"", client, tag, target);
 }
+
+void Message_UnableToCreateDirectory(const char[] path) {
+    LogError("Unable to create the '%s' directory", path);
+}
+
+void Message_UnableToOpenConfig(const char[] path, const char[] mode) {
+    LogError("Unable to open the '%s' config with '%s' mode", path, mode);
+}

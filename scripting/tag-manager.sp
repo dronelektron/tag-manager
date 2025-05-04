@@ -3,6 +3,7 @@
 #include "tag-manager/console-command"
 #include "tag-manager/message"
 #include "tag-manager/player-tag-list"
+#include "tag-manager/storage"
 #include "tag-manager/use-case"
 
 #include "modules/console-command.sp"
@@ -10,6 +11,7 @@
 #include "modules/message.sp"
 #include "modules/native.sp"
 #include "modules/player-tag-list.sp"
+#include "modules/storage.sp"
 #include "modules/use-case.sp"
 
 public Plugin myinfo = {
@@ -30,9 +32,11 @@ public void OnPluginStart() {
     Command_Create();
     Forward_Create();
     PlayerTagList_Create();
+    Storage_CreateDirectory();
     LoadTranslations("tag-manager.phrases");
 }
 
-public void OnClientConnected(int client) {
-    PlayerTagList_Clear(client);
+public void OnClientPostAdminCheck(int client) {
+    Storage_BuildPath(client);
+    Storage_LoadTags(client);
 }
