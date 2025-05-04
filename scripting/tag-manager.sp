@@ -1,6 +1,5 @@
 #include <sourcemod>
 
-#include "tag-manager/console-command"
 #include "tag-manager/message"
 #include "tag-manager/player-tag-list"
 #include "tag-manager/storage"

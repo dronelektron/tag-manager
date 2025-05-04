@@ -1,13 +1,13 @@
 void Message_AddTagUsage(int client) {
-    ReplyToCommand(client, "%s%s", PREFIX, "Usage: " ... COMMAND_TAG_ADD ... " <#userid|name> <tag>");
+    ReplyToCommand(client, "%s%s", PREFIX, "Usage: sm_tagmanager_add <#userid|name> <tag>");
 }
 
 void Message_RemoveTagUsage(int client) {
-    ReplyToCommand(client, "%s%s", PREFIX, "Usage: " ... COMMAND_TAG_REMOVE ... " <#userid|name> <tag>");
+    ReplyToCommand(client, "%s%s", PREFIX, "Usage: sm_tagmanager_remove <#userid|name> <tag>");
 }
 
 void Message_CheckTagUsage(int client) {
-    ReplyToCommand(client, "%s%s", PREFIX, "Usage: " ... COMMAND_TAG_CHECK ... " <#userid|name> <tag>");
+    ReplyToCommand(client, "%s%s", PREFIX, "Usage: sm_tagmanager_check <#userid|name> <tag>");
 }
 
 void Message_PlayerNotFound(int client) {

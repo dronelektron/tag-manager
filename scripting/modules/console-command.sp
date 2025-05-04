@@ -1,7 +1,7 @@
 void Command_Create() {
-    RegAdminCmd(COMMAND_TAG_ADD, OnAddTag, ADMFLAG_GENERIC);
-    RegAdminCmd(COMMAND_TAG_REMOVE, OnRemoveTag, ADMFLAG_GENERIC);
-    RegAdminCmd(COMMAND_TAG_CHECK, OnCheckTag, ADMFLAG_GENERIC);
+    RegAdminCmd("sm_tagmanager_add", OnAddTag, ADMFLAG_GENERIC);
+    RegAdminCmd("sm_tagmanager_remove", OnRemoveTag, ADMFLAG_GENERIC);
+    RegAdminCmd("sm_tagmanager_check", OnCheckTag, ADMFLAG_GENERIC);
 }
 
 static Action OnAddTag(int client, int args) {
