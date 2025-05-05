@@ -5,13 +5,11 @@ void Storage_CreateDirectory() {
 
     BuildPath(Path_SM, configPath, sizeof(configPath), STORAGE_PATH);
 
-    if (DirExists(configPath)) {
+    if (DirExists(configPath) || CreateDirectory(configPath, PERMISSIONS)) {
         return;
     }
 
-    if (!CreateDirectory(configPath, PERMISSIONS)) {
-        Message_UnableToCreateDirectory(configPath);
-    }
+    Message_UnableToCreateDirectory(configPath);
 }
 
 void Storage_BuildPath(int client) {
