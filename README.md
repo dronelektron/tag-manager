@@ -1,6 +1,10 @@
 # Tag manager
 
-Allows you to manage player tags
+Allows you to manage player tags:
+
+* Add
+* Remove
+* Check
 
 ### Supported Games
 
@@ -23,13 +27,13 @@ Allows you to manage player tags
 
 ### API
 
-Called when the `client` has added a `tag` for the `target`
+Called when the `client` has added the `tag` for the `target`
 
 ```sourcepawn
 forward void TagManager_OnTagAdded(int client, int target, const char[] tag);
 ```
 
-Called when the `client` has removed a `tag` for the `target`
+Called when the `client` has removed the `tag` for the `target`
 
 ```sourcepawn
 forward void TagManager_OnTagRemoved(int client, int target, const char[] tag);
