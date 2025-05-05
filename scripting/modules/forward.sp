@@ -1,20 +1,20 @@
-static GlobalForward g_onTagAdded;
-static GlobalForward g_onTagRemoved;
+static GlobalForward g_onAdded;
+static GlobalForward g_onRemoved;
 
 void Forward_Create() {
-    g_onTagAdded = new GlobalForward("TagManager_OnTagAdded", ET_Ignore, Param_Cell, Param_Cell, Param_String);
-    g_onTagRemoved = new GlobalForward("TagManager_OnTagRemoved", ET_Ignore, Param_Cell, Param_Cell, Param_String);
+    g_onAdded = new GlobalForward("TagManager_OnAdded", ET_Ignore, Param_Cell, Param_Cell, Param_String);
+    g_onRemoved = new GlobalForward("TagManager_OnRemoved", ET_Ignore, Param_Cell, Param_Cell, Param_String);
 }
 
-void Forward_OnTagAdded(int client, int target, const char[] tag) {
-    OnTagAction(g_onTagAdded, client, target, tag);
+void Forward_OnAdded(int client, int target, const char[] tag) {
+    OnAction(g_onAdded, client, target, tag);
 }
 
-void Forward_OnTagRemoved(int client, int target, const char[] tag) {
-    OnTagAction(g_onTagRemoved, client, target, tag);
+void Forward_OnRemoved(int client, int target, const char[] tag) {
+    OnAction(g_onRemoved, client, target, tag);
 }
 
-static void OnTagAction(GlobalForward callback, int client, int target, const char[] tag) {
+static void OnAction(GlobalForward callback, int client, int target, const char[] tag) {
     Call_StartForward(callback);
     Call_PushCell(client);
     Call_PushCell(target);

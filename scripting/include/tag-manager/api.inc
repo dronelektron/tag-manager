@@ -3,8 +3,8 @@
 #endif
 #define _tag_manager_api_included
 
-forward void TagManager_OnTagAdded(int client, int target, const char[] tag);
+forward void TagManager_OnAdded(int client, int target, const char[] tag);
 
-forward void TagManager_OnTagRemoved(int client, int target, const char[] tag);
+forward void TagManager_OnRemoved(int client, int target, const char[] tag);
 
-native bool TagManager_IsClientHasTag(int client, const char[] tag);
+native bool TagManager_Check(int client, const char[] tag);

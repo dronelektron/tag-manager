@@ -30,17 +30,17 @@ Allows you to manage player tags:
 Called when the `client` has added the `tag` for the `target`
 
 ```sourcepawn
-forward void TagManager_OnTagAdded(int client, int target, const char[] tag);
+forward void TagManager_OnAdded(int client, int target, const char[] tag);
 ```
 
 Called when the `client` has removed the `tag` for the `target`
 
 ```sourcepawn
-forward void TagManager_OnTagRemoved(int client, int target, const char[] tag);
+forward void TagManager_OnRemoved(int client, int target, const char[] tag);
 ```
 
 Checks if the `client` has the `tag`
 
 ```sourcepawn
-native bool TagManager_IsClientHasTag(int client, const char[] tag);
+native bool TagManager_Check(int client, const char[] tag);
 ```

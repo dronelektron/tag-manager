@@ -1,8 +1,8 @@
 void Native_Create() {
-    CreateNative("TagManager_IsClientHasTag", IsClientHasTag);
+    CreateNative("TagManager_Check", Check);
 }
 
-static any IsClientHasTag(Handle plugin, int numParams) {
+static any Check(Handle plugin, int numParams) {
     int client = GetNativeCell(1);
     char tag[TAG_SIZE];
 
