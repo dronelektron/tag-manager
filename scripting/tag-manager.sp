@@ -32,6 +32,7 @@ public void OnPluginStart() {
     Forward_Create();
     PlayerTagList_Create();
     Storage_CreateDirectory();
+    LoadTranslations("common.phrases");
     LoadTranslations("tag-manager.phrases");
 }
 
