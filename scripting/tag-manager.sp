@@ -17,7 +17,7 @@ public Plugin myinfo = {
     name = "Tag manager",
     author = "Dron-elektron",
     description = "Allows you to manage player tags",
-    version = "0.2.0",
+    version = "0.2.1",
     url = "https://github.com/dronelektron/tag-manager"
 };
 
@@ -32,6 +32,7 @@ public void OnPluginStart() {
     Forward_Create();
     PlayerTagList_Create();
     Storage_CreateDirectory();
+    LoadTranslations("common.phrases");
     LoadTranslations("tag-manager.phrases");
 }
 
